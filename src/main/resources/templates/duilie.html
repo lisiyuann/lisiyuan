@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>数据结构知识点管理系统</title>
+</head>
+<body>
+<h2 style="text-align:center">队列相关知识点<h2>
+
+    <div>
+        <form action="/zhuye" method="post">
+
+            <input type="submit" value="返回主页">
+        </form>
+    </div>
+    <div class="content">
+        <h3>1.1基本概念</h3>
+        <p>队列是一种线性数据结构；日常生活中的排队是一种典型的队列，不允许插队；一端插入，另一端删除，先进先出。满足数据元素先进先出或者后进后岀的操作的一种特殊的线性表；允许插入的一端称为队尾（rear），允许删除的一端称为队头（ front）。
+        </p>
+        <h3>1.2按存储方式分类：：</h3>
+        <p>顺序队列、链式队列</p>
+        <p>链式队列：
+            <br>&nbsp; &nbsp; &nbsp; &nbsp; 由链表组成
+            <br>&nbsp; &nbsp; &nbsp; &nbsp; 限制链表的插入删除只能在两端进行
+            <br>&nbsp; &nbsp; &nbsp; &nbsp; 设置了两个指针变量 front和rear，分别指向队列的头元素和尾元素
+        </p>
+        <h3>1.3队的约定</h3>
+        <p>front指向队中实际头元素位置
+            <br>&nbsp; &nbsp; &nbsp; &nbsp; rear指向队中实际尾元素的下一位
+            <br>&nbsp; &nbsp; &nbsp; &nbsp; front指向队中实际头元素位置的前一个位置
+            <br>&nbsp; &nbsp; &nbsp; &nbsp; rear指向队中实际尾元素的位置
+            <br>&nbsp; &nbsp; &nbsp; &nbsp; 主要考虑队假满情况
+        </p>
+        <p>循环队列就是顺序存储队列为了避免假溢出利用%运算符将队列首尾相连成一个环状的队列。</p>
+
+
+
+    </div>
+
+
+
+</body>
+
+<style>
+
+
+    h3{
+        font-size:20px;
+        text-indent:5em;
+        line-height:0.1px;
+        white-space:normal;
+        word-wrap:break-word;
+        word-break:break-all;
+
+    }
+    br{
+        padding-left:8em;
+        padding-right:6em;
+        margin-block-start:2em;
+        margin-block-end: 2em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    p,img{
+        font-size:16px;
+        display:inline;
+        text-indent:2em;
+        padding-left:6em;
+        padding-right:6em;
+        white-space:normal;
+        word-wrap:break-word;
+        word-break:break-all;
+
+
+
+
+
+
+        display: block;
+        margin-block-start:1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        orphans: 4;
+        text-align: start;
+
+
+    }
+
+
+</style>
+
+
+</html>

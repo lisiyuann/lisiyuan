@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" media="screen" href="/login.css">
+</head>
+<body>
+<!-- particles.js container -->
+<div id="particles-js" style="display: flex;align-items: center;justify-content: center">
+    <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="472" height="625"></canvas>
+</div>
+<div class="apTitle">个人中心</div>
+<div class="logcon">  <form action="/deleteuser" method="post"><input type="text" name="username" placeholder="账号">
+    <input type="submit" value="删除用户"></form>
+    <h2 th:utext="${msg3}" style="color: aquamarine;"></h2>
+
+    <form action="/updateuser" method="post"><input type="text" name="username" placeholder="账号">
+        <input type="password" name="password" placeholder="密码">
+        <input type="submit" value="更改密码"></form>
+    <h2 th:utext="${msg4}" style="color: aquamarine;"></h2>
+
+</div>
+
+
+<!-- scripts -->
+<script src="/login.js"></script>
+<script src="/loginApp.js"></script>
+<script>
+    function changeImg() {
+        let pic = document.getElementById('picture');
+        console.log(pic.src)
+        if (pic.getAttribute("src", 2) == "img/check.png") {
+            pic.src = "img/checked.png"
+        } else {
+            pic.src = "img/check.png"
+        }
+    }
+</script>
+
+</body>
+</html>
