@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查询界面</title>
+
+</head>
+<body background="/2.jpg ">
+<h2 class="co">数据结构知识点管理系统</h2>
+<div>
+    <form action="/zhuye" method="post">
+        <label class="co">个人中心</label>
+
+        <input type="submit" value="前往">
+    </form>
+</div>
+<h2></h2>
+<div>
+    <form action="/zhankai  " method="post">
+        <label class="co">展开知识点</label>
+        <input type="submit" value="展开">
+    </form>
+    <h2></h2>
+    <form action="/shouqi " method="post">
+        <label class="co">收起知识点</label>
+        <input type="submit" value="收起">
+    </form>
+    <h2 th:text="${msg8}"  style="color:white ;"></h2>
+
+    <div>
+<h2></h2>
+<div><form action="/addshuju" method="post"><label class="co">新建标题</label>
+    <input type="text" name="biaoti" placeholder="知识点标题">
+    <input type="submit" value="添加"></form><h2 th:utext="${msg5}" style="color:white  ;"></h2>
+ </div>
+<div>
+    <form action="/deleteshuju" method="post">
+        <label class="co">删除标题</label>
+        <input type="text" name="biaoti" placeholder="知识点标题">
+        <input type="submit" value="删除">
+    </form>
+    <h2 th:utext="${msg9}" style="color:white  ;"></h2>
+</div>
+        <div>
+            <form action="/getshuju  " method="post">
+                <label class="co">知识点标题</label>
+                <input type="text" name="biaoti" placeholder="知识点标题">
+                <input type="submit" value="查找">
+            </form>
+            <h2 th:utext="${msg11}" style="color:white  ;"></h2>
+        </div>
+        <h2></h2>
+        <div>
+    <form action="/updateshuju" method="post">
+        <label class="co">知识点标题</label>
+        <textarea type="text" name="biaoti"  rows="0.06" cols="15" th:text="${msg10}"  ></textarea>
+        <input type="submit" value="保存">
+        <h2></h2>
+        <textarea type="text" name="date"  rows="20" cols="200" th:text="${msg7}"></textarea>
+
+    </form>
+
+</div>
+
+</body>
+
+
+<style>
+    .co {
+        color:white;
+    }
+</style>
+</html>

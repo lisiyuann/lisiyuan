@@ -1,34 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - Header Underline</title>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
 
-<link rel="stylesheet" href="/style.css">
 
 </head>
-<body>
+<body background="/2.jpg "  >
+<h2 class="co">个人中心</h2>
+<div>
+    <form action="/deleteuser" method="post">
+       <label  class="co">用户名 </label>
+        <input type="text" name="username" placeholder="用户名">
+         <label class="co">密码</label>
+        <input type="text" name="password" placeholder="密码">
+        <input type="submit" value="删除用户">
+    </form>
+    <h2 th:utext="${msg2}" style="color: aquamarine;"></h2>
 
-<header>
-  <a href="#0" class="logo">数据结构知识管理系统</a>
-  <nav class="site-nav">
-    <ul>
-      <li><a href="/login ">个人中心</a></li>
-      <li><a href="/gailun ">数据结构概论</a></li>
-      <li><a href="/shu ">树</a></li>
-      <li><a href="/tu">图</a></li>
-      <li><a href="/xianxingbiao">线性表</a></li>
-      <li><a href="/lianbiao">链表</a></li>
 
-      <li><a href="/shuzu">数组</a></li>
-      <li><a href="/duilie">队列</a></li>
-      <li><a href="/zhan">栈</a></li>
-      <li><a href="/chazhaopaixu ">查找排序</a></li>
-    </ul>
-  </nav>
-</header>
+</div>
+<div>
+    <form action="/getuser" method="post">
+        <label class="co">用户名</label>
+        <input type="text" name="username" placeholder="用户名">
 
-<script  src="/script.js"></script>
+        <input type="submit" value="查找用户">
+    </form>
+    <h2 th:utext="${msg3}" style="color: aquamarine;"></h2>
+
+
+</div>
+<div>
+    <form action="/updateuser" method="post">
+        <label class="co">用户名</label>
+        <input type="text" name="username" placeholder="用户名">
+        <label class="co">密码</label>
+        <input type="password" name="password" placeholder="密码">
+        <input type="submit" value="更改密码">
+    </form>
+    <h2 th:utext="${msg4}" style="color:aquamarine ;"></h2>
+
+</div>
 
 </body>
+
+
+    <style>
+    .co {
+      color:white;
+    }
+    </style>
 </html>
