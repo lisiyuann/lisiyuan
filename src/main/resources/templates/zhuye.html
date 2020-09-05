@@ -35,8 +35,10 @@
     <form action="/updateuser" method="post">
         <label class="co">用户名</label>
         <input type="text" name="username" placeholder="用户名">
-        <label class="co">密码</label>
-        <input type="password" name="password" placeholder="密码">
+        <label class="co">原密码</label>
+        <input type="password" name="opassword" placeholder="密码">
+        <label class="co">新密码</label>
+        <input type="password" name="npassword" placeholder="密码">
         <input type="submit" value="更改密码">
     </form>
     <h2 th:utext="${msg4}" style="color:aquamarine ;"></h2>

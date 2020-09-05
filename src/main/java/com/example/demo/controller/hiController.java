@@ -31,12 +31,11 @@ public class hiController {
         String password = request.getParameter("password");
         User loginuser = userMapper.login(username, password);
         System.out.println(loginuser);
-        map.put("msg", "用户名或密码错误！");
         if (loginuser != null) {
 
             return "chaxun";
         } else {
-
+            map.put("msg", "用户名或密码错误！");
             return "register";
         }
 
@@ -100,14 +99,15 @@ public class hiController {
     @RequestMapping("/updateuser")//此类命令可与html页面相应的动作按钮关联起来，否则报错
     public String update(HttpServletRequest request, Map<String, Object> map) {
         String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        User getuser = userMapper.getuser(username);
-        if (getuser != null) {
-            userMapper.updateuser(username, password);
+        String opassword = request.getParameter("opassword");
+        String npassword = request.getParameter("npassword");
+        User naa = userMapper.login(username,opassword );
+        if (naa != null) {
+            userMapper.updateuser(username, npassword);
 
             return "register";
         } else {
-            map.put("msg4", "用户名不合法!");
+            map.put("msg4", "用户名不合法或密码不正确!");
             return "zhuye";
         }
     }
